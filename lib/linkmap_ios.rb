@@ -128,6 +128,7 @@ module LinkmapIos
         if text.include?('.framework') and not $2.include?('.')
           lib = $2
         else
+          text.rstrip!
           if text.end_with?('.a')
             lib = $2
           else
